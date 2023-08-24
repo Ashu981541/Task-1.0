@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Responsive Animated Webpage</title>
+</head>
+<body>
+    <header>
+        <h1>My Responsive Page</h1>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Welcome to My Page</h2>
+            <p>This is the main content of the webpage.</p>
+            <button class="hover-animation">Hover Me</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+CSS (styles.css):
+
+css
+Copy code
+/* Reset some default browser styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* Adjust for header and footer heights */
+}
+
+.content {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.hover-animation {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hover-animation:hover {
+    background-color: #2980b9;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
